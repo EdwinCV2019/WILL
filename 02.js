@@ -12,6 +12,27 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
+
+  var longitud=0;
+  var resultado;
+
+  strings.forEach(element => {
+    
+    if (longitud < element.length){
+
+      longitud=element.length;
+      resultado = element;
+
+
+    };
+
+
+  });
+
+  return resultado;
+
+
+
 }
 
 // No modifiques nada debajo de esta linea //

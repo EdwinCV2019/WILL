@@ -15,6 +15,36 @@ function buscarAmigo(amigos, nombre) {
 
   // Tu código aca:
   
+
+  
+  for(let i=0; i<amigos.length;i++){
+
+    if(amigos[i].nombre===nombre){
+      
+      return amigos[i];
+
+    }
+
+
+    
+  }
+
+ 
+
+
+
+ /*var resultado=amigos.map(function(amigo){
+
+    if(amigo.nombre==nombre){
+
+      return amigo.value;
+
+    }
+
+  });
+  return resultado;*/
+  
+  
 }
 
 // No modifiques nada debajo de esta linea //

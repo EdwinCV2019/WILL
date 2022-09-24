@@ -12,6 +12,11 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      this.nombre=nombre;
+      this.edad=edad;
+      this.hobbies=hobbies;
+      this.amigos=amigos;
+
     }
 
     addFriend(nombre, edad) {
@@ -20,6 +25,10 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+      let amigo = {nombre, edad} //crea un objeto con las variables amigo
+      this.amigos.push(amigo); //agrega el objeto al array amigos
+
+      
 
     }
 
@@ -28,6 +37,8 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+
+      this.hobbies.push(hobby);//agrega un nuevo hobby al array hobbies
 
     }
     getFriends() {
@@ -39,6 +50,16 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      let nombres=[];
+
+      nombres=this.amigos.map(function(nombreamigos){
+
+        return nombreamigos.nombre;
+
+
+      });
+      return nombres;
+
     }
 
     getHobbies() {
@@ -47,6 +68,8 @@ function crearClasePersona() {
       // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
+
+      return this.hobbies
 
     }
 
@@ -67,11 +90,23 @@ function crearClasePersona() {
 
       // Tu código aca:
 
-    }
-  };
+      var sumaedad=0;
+      
+      this.amigos.forEach(element => {
+        
+        sumaedad=sumaedad+element.edad;
+      });
+      
+      let promedio= sumaedad/this.amigos.length;
+      return promedio;
 
+      
+
+    }
+  
+  }
   return Persona;
-}
+} 
 
 // No modifiques nada debajo de esta linea //
 

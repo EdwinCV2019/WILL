@@ -12,6 +12,14 @@ function soloNumeros(array) {
 
   // Tu código aca:
 
+ enteros = array.filter(elemento => Number.isInteger(elemento)); //Filtra solo los elementos enteros de un array
+
+  return enteros;
+
+
+
+  
+
 }
 
 // No modifiques nada debajo de esta linea //
